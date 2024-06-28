@@ -26,8 +26,8 @@ const homecontroller: RequestHandler = (req: Request, res: Response): void => {
   if (type === "base64")
     return response(
       res,
-      StatusCodes.BAD_REQUEST,
-      false,
+      StatusCodes.ACCEPTED,
+      true,
       {
         captcha: randomText,
         image: generateCaptcha(randomText, "base64"),
