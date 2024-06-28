@@ -2,6 +2,9 @@
 
 A captcha generation tool built with Node.js and Canvas.
 
+**Want to check online?**
+[🚀Live Link](https://easy-captcha-server.onrender.com/)
+
 ### Project Description:
 
 Easy Captcha showcases the ability of Node.js to create captcha images, providing a straightforward and effective method to implement captcha functionality in web applications. Utilizing the Canvas library, this tool generates customizable captcha images to help prevent automated abuse and ensure security.
@@ -53,34 +56,37 @@ GET /
 ```
 
 #### Example image:
+
 ![captcha built from easy-captcha](https://i.ibb.co/BLtdQ9c/localhost.png)
 
 ### Custom Text
 
-You can provide your own text using a query parameter. 
+You can provide your own text using a query parameter.
 
 ```http
 GET /?text=<YOUR_TEXT>
 ```
 
 #### Example image:
+
 For example, using **c5Uop**:
 
 ```http
 GET /?text=c5Uop
 ```
+
 ![captcha built from easy-captcha](https://i.ibb.co/jzvVrB2/localhost.png)
 
 **Note:** The text cannot be more than 5 characters long. If it exceeds 5 characters, an error response is returned:
 
 ```json
 {
-    "status": false,
-    "data": {
-        "captcha": "c5Uop55",
-        "image": null
-    },
-    "message": "Text is too long!"
+  "status": false,
+  "data": {
+    "captcha": "c5Uop55",
+    "image": null
+  },
+  "message": "Text is too long!"
 }
 ```
 
@@ -93,14 +99,12 @@ GET /?type=base64
 ```
 
 #### Example image:
-![captcha built from easy-captcha](https://i.ibb.co/KWccWdk/image.png)
 
+![captcha built from easy-captcha](https://i.ibb.co/KWccWdk/image.png)
 
 ## 🚀 Author
 
 [@MHNahib](https://www.github.com/MHNahib)
-
-
 
 ## License
 
